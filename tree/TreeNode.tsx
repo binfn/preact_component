@@ -595,23 +595,23 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
     const dragging = draggingNodeKey === eventKey;
     const ariaSelected = selectable !== undefined ? { 'aria-selected': !!selectable } : undefined;
     console.log("disabled:"+disabled +" className:"+className);
-    const classStr=className?className:''
+    const classStr=(className?className:'')
     +' '+`${prefixCls}-treenode`
-    +' '+disabled?`${prefixCls}-treenode-disabled`:''
-    +' '+(!isLeaf)?`${prefixCls}-treenode-switcher-${expanded ? 'open' : 'close'}`:''
-    +' '+(checked)?`${prefixCls}-treenode-checkbox-checked`:''
-    +' '+(halfChecked)?`${prefixCls}-treenode-checkbox-indeterminate`:''
-    +' '+(selected)?`${prefixCls}-treenode-selected`:''
-    +' '+(loading)?`${prefixCls}-treenode-loading`:''
-    +' '+(active)?`${prefixCls}-treenode-active`:''
-    +' '+(isEndNode)?`${prefixCls}-treenode-leaf-last`:''
-    +' '+(draggableWithoutDisabled)?`${prefixCls}-treenode-draggable`:''
-    +' '+dragging?`dragging`:''
-    +' '+(dropTargetKey === eventKey)?'drop-target':''
-    +' '+(dropContainerKey === eventKey)?'drop-container':''
-    +' '+(!disabled && dragOver)?'drag-over':''
-    +' '+(!disabled && dragOverGapTop)?'drag-over-gap-top':''
-    +' '+(filterTreeNode && filterTreeNode(convertNodePropsToEventData(this.props)))?'filter-node':''
+    +' '+(disabled?`${prefixCls}-treenode-disabled`:'')
+    +' '+((!isLeaf)?`${prefixCls}-treenode-switcher-${expanded ? 'open' : 'close'}`:'')
+    +' '+((checked)?`${prefixCls}-treenode-checkbox-checked`:'')
+    +' '+((halfChecked)?`${prefixCls}-treenode-checkbox-indeterminate`:'')
+    +' '+((selected)?`${prefixCls}-treenode-selected`:'')
+    +' '+((loading)?`${prefixCls}-treenode-loading`:'')
+    +' '+((active)?`${prefixCls}-treenode-active`:'')
+    +' '+((isEndNode)?`${prefixCls}-treenode-leaf-last`:'')
+    +' '+((draggableWithoutDisabled)?`${prefixCls}-treenode-draggable`:'')
+    +' '+(dragging?`dragging`:'')
+    +' '+((dropTargetKey === eventKey)?'drop-target':'')
+    +' '+((dropContainerKey === eventKey)?'drop-container':'')
+    +' '+((!disabled && dragOver)?'drag-over':'')
+    +' '+((!disabled && dragOverGapTop)?'drag-over-gap-top':'')
+    +' '+((filterTreeNode && filterTreeNode(convertNodePropsToEventData(this.props)))?'filter-node':'')
     console.log("this.classStr:"+classStr);
     return (
       <div
