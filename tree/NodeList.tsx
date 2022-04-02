@@ -1,10 +1,8 @@
-/** @jsx  React.h */
-/** @jsxFrag  React.Fragment */
+/** @jsx h */
+/** @jsxFrag Fragment */
 
-/**
- * Handle virtual list of the TreeNodes.
- */
 
+import {h,Fragment} from '../deps.ts';
 import * as React from '../deps.ts';
 import VirtualList, { ListRef } from '../virtual-list/index.ts';
 import { FlattenNode, Key, DataEntity, DataNode, ScrollTo } from './interface.tsx';

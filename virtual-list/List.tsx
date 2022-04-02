@@ -1,8 +1,9 @@
-/** @jsx  React.h */
-/** @jsxFrag  React.Fragment */
+/** @jsx h */
+/** @jsxFrag Fragment */
 
 /// <reference lib="dom" />
 
+import {h,Fragment} from '../deps.ts';
 
 // deno-lint-ignore-file no-explicit-any
 
