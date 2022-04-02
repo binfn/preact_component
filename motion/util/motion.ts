@@ -48,13 +48,14 @@ if (canUseDOM()) {
   ({ style } = document.createElement('div'));
 }
 
-const prefixedEventNames = {};
+const prefixedEventNames:any = {};
 
 export function getVendorPrefixedEventName(eventName: string) {
   if (prefixedEventNames[eventName]) {
     return prefixedEventNames[eventName];
   }
 
+  //@ts-ignore original
   const prefixMap = vendorPrefixes[eventName];
 
   if (prefixMap) {
@@ -94,6 +95,7 @@ export function getTransitionName(
     const type = transitionType.replace(/-\w/g, match =>
       match[1].toUpperCase(),
     );
+    //@ts-ignore original
     return transitionName[type];
   }
 
