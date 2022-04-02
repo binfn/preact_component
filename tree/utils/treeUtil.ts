@@ -70,7 +70,7 @@ export function warningWithoutKey(treeData: DataNode[], fieldNames: FieldNames) 
  * Convert `children` of Tree into `treeData` structure.
  */
 export function convertTreeToData(rootNodes: React.VNode): DataNode[] {
-  function dig(node: React.VNode): DataNode[] {
+  function dig(node: React.ComponentChildren): DataNode[] {
     const treeNodes = toArray(node) as NodeElement[];
     return treeNodes
       .map(treeNode => {
