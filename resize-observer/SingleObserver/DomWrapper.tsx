@@ -1,3 +1,6 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 import * as React from '../../deps.ts';
 
 export interface DomWrapperProps {

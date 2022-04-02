@@ -1,3 +1,6 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 /**
  * Handle virtual list of the TreeNodes.
  */

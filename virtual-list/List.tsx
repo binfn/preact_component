@@ -1,5 +1,10 @@
-// deno-lint-ignore-file no-explicit-any
 /// <reference lib="dom" />
+
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
+// deno-lint-ignore-file no-explicit-any
+
 import * as React from '../deps.ts';
 
 import { useRef, useState } from '../deps.ts';

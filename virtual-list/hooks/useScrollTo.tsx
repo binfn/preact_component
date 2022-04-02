@@ -1,3 +1,6 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 /* eslint-disable no-param-reassign */
 import * as React from '../../deps.ts';
 import raf from '../../util/raf.ts';

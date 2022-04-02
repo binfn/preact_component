@@ -1,3 +1,6 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 import { composeRef, supportRef } from '../../util/ref.ts';
 import * as React from '../../deps.ts';
 import findDOMNode from '../../util/Dom/findDOMNode.ts';

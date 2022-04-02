@@ -1,4 +1,7 @@
 /// <reference lib="dom" />
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 /* eslint-disable no-lonely-if */
 /**
  * Legacy code. Should avoid to use if you are new to import these code.

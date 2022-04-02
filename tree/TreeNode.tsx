@@ -1,4 +1,8 @@
 /// <reference lib="dom" />
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
+
 import * as React from '../deps.ts';
 import pickAttrs from '../util/pickAttrs.ts';
 import { TreeContext, TreeContextProps } from './contextTypes.ts';

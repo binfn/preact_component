@@ -1,4 +1,6 @@
 /// <reference lib="dom" />
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
 
 import * as React from '../deps.ts';
 import raf from '../util/raf.ts';

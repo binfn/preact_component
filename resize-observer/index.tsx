@@ -1,3 +1,6 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 import * as React from '../deps.ts';
 import toArray from '../util/Children/toArray.ts';
 import SingleObserver from './SingleObserver/index.tsx';
