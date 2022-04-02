@@ -1443,12 +1443,12 @@ class Tree<TreeDataType extends BasicDataNode = DataNode> extends React.Componen
       >
         <div
           role="tree"
-          className={prefixCls?prefixCls:''
-          +" "+className?className:''
-          +" "+rootClassName?rootClassName:''
-          +" "+showLine?`${prefixCls}-show-line`:''
-          +" "+focused?`${prefixCls}-focused`:''
-          +" "+activeKey !== null?`${prefixCls}-active-focused`:''
+          className={(prefixCls?prefixCls:'')
+          +" "+(className?className:'')
+          +" "+(rootClassName?rootClassName:'')
+          +" "+(showLine?`${prefixCls}-show-line`:'')
+          +" "+(focused?`${prefixCls}-focused`:'')
+          +" "+((activeKey !== null)?`${prefixCls}-active-focused`:'')
           //   classNames(prefixCls, className, rootClassName, {
           //   [`${prefixCls}-show-line`]: showLine,
           //   [`${prefixCls}-focused`]: focused,

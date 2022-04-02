@@ -19,8 +19,8 @@ const Indent = ({ prefixCls, level, isStart, isEnd }: IndentProps) => {
       <span
         key={i}
         className={baseClassName
-          +' '+isStart[i]?`${baseClassName}-start`:''
-          +' '+isEnd[i]?`${baseClassName}-end`:''
+          +' '+(isStart[i]?`${baseClassName}-start`:'')
+          +' '+(isEnd[i]?`${baseClassName}-end`:'')
           }
       />,
     );

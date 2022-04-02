@@ -195,7 +195,7 @@ export default class ScrollBar extends React.Component<ScrollBarProps, ScrollBar
     return (
       <div
         ref={this.scrollbarRef}
-        className={`${prefixCls}-scrollbar `+canScroll?`${prefixCls}-scrollbar-show`:''}
+        className={`${prefixCls}-scrollbar `+(canScroll?`${prefixCls}-scrollbar-show`:'')}
         style={{
           width: 8,
           top: 0,
@@ -209,7 +209,7 @@ export default class ScrollBar extends React.Component<ScrollBarProps, ScrollBar
       >
         <div
           ref={this.thumbRef}
-          className={`${prefixCls}-scrollbar-thumb `+dragging?`${prefixCls}-scrollbar-thumb-moving`:''}
+          className={`${prefixCls}-scrollbar-thumb `+(dragging?`${prefixCls}-scrollbar-thumb-moving`:'')}
           style={{
             width: '100%',
             height: spinHeight,

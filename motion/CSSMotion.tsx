@@ -210,9 +210,9 @@ export function genCSSMotion(
       motionChildren = children(
         {
           ...mergedProps,
-          className: classNames1?classNames1:''
-          +' '+statusSuffix?classNames2:''
-          +' '+typeof motionName === 'string'?motionName:'',
+          className: (classNames1?classNames1:'')
+          +' '+(statusSuffix?classNames2:'')
+          +' '+(typeof motionName === 'string'?motionName:''),
           
           // classNames(getTransitionName(motionName, status), {
           //   [getTransitionName(motionName, `${status}-${statusSuffix}`)]:

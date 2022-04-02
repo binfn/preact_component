@@ -84,7 +84,7 @@ const MotionTreeNode: React.Compat.ForwardFn<MotionTreeNodeProps,HTMLDivElement>
           {className: motionClassName, style: motionStyle}, motionRef) => (
           <div
             ref={motionRef}
-            className={`${prefixCls}-treenode-motion `+motionClassName?motionClassName:''}
+            className={`${prefixCls}-treenode-motion ${motionClassName?motionClassName:''}`}
             style={motionStyle}
           >
             {motionNodes.map((treeNode: FlattenNode) => {
