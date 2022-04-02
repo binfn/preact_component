@@ -594,7 +594,7 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
 
     const dragging = draggingNodeKey === eventKey;
     const ariaSelected = selectable !== undefined ? { 'aria-selected': !!selectable } : undefined;
-    console.log("this.props:"+JSON.stringify(this.props));
+    console.log("disabled:"+disabled +" className:"+className);
     const classStr=className?className:''
     +' '+`${prefixCls}-treenode`
     +' '+disabled?`${prefixCls}-treenode-disabled`:''
