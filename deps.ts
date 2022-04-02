@@ -10,7 +10,7 @@ export {default as Compat} from "https://esm.sh/preact@10.x.x/compat";
 export { isFragment,isMemo } from "https://esm.sh/react-is";
 // type UIEvent=JSX.TargetedEvent
 // export type { UIEvent }
-import ResizeObserver from "https://esm.sh/resize-observer-polyfill";
+import ResizeObserver from "./resize-observer-polyfill/index.js";
 
 export {ResizeObserver}
 
