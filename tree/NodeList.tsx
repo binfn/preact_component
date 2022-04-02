@@ -169,7 +169,7 @@ const RefNodeList: React.Compat.ForwardFn<NodeListProps,NodeListRef> = (props, r
   } = props;
 
   // =============================== Ref ================================
-  const listRef = React.useRef<ListRef>();
+  const listRef = React.useRef<ListRef>(null);
   const indentMeasurerRef = React.useRef<HTMLDivElement>(null);
   React.useImperativeHandle(ref, () => ({
     scrollTo: scroll => {

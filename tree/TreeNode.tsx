@@ -28,7 +28,7 @@ export interface TreeNodeProps<TreeDataType extends BasicDataNode = DataNode> {
   loaded?: boolean;
   loading?: boolean;
   halfChecked?: boolean;
-  title?: React.ComponentChild | ((data: TreeDataType) => React.VNode);
+  title?: React.ComponentChild | ((data: TreeDataType) => React.ComponentChild);
   dragOver?: boolean;
   dragOverGapTop?: boolean;
   dragOverGapBottom?: boolean;
@@ -49,7 +49,7 @@ export interface TreeNodeProps<TreeDataType extends BasicDataNode = DataNode> {
   disableCheckbox?: boolean;
   icon?: IconType;
   switcherIcon?: IconType;
-  children?: React.VNode;
+  children?: React.ComponentChildren;
 }
 
 export interface InternalTreeNodeProps extends TreeNodeProps {

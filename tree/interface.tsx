@@ -24,7 +24,7 @@ export interface BasicDataNode {
 export interface DataNode extends BasicDataNode {
   children?: DataNode[];
   key: string | number;
-  title?: React.VNode;
+  title?: React.ComponentChild;
 }
 
 export interface EventDataNode extends DataNode {
