@@ -1,0 +1,61 @@
+// deno-lint-ignore-file ban-types no-explicit-any
+/* eslint-disable no-param-reassign */
+import type * as React from '../deps.ts';
+import { isMemo } from '../deps.ts';
+import useMemo from './hooks/useMemo.ts';
+
+export function fillRef<T>(ref: React.Ref<T>|Function, node: T) {
+  if (typeof ref === 'function') {
+    ref(node);
+  } else if (typeof ref === 'object' && ref && 'current' in ref) {
+    (ref as any).current = node;
+  }
+}
+
+/**
+ * Merge refs into one ref function to support ref passing.
+ */
+export function composeRef<T>(...refs: React.Ref<T>[]): React.Ref<T> {
+  const refList = refs.filter(ref => ref);
+  if (refList.length <= 1) {
+    return refList[0];
+  }
+ //@ts-ignore original
+  return (node: T) => {
+    refs.forEach(ref => {
+      fillRef(ref, node);
+    });
+  };
+}
+
+export function useComposeRef<T>(...refs: React.Ref<T>[]): React.Ref<T> {
+  //@ts-ignore original
+  return useMemo(
+    () => composeRef(...refs),
+    refs,
+    (prev, next) =>
+      prev.length === next.length && prev.every((ref, i) => ref === next[i]),
+  );
+}
+
+export function supportRef(nodeOrComponent: any): boolean {
+  const type = isMemo(nodeOrComponent)
+    ? nodeOrComponent.type.type
+    : nodeOrComponent.type;
+
+  // Function component node
+  if (typeof type === 'function' && !type.prototype?.render) {
+    return false;
+  }
+
+  // Class component
+  if (
+    typeof nodeOrComponent === 'function' &&
+    !nodeOrComponent.prototype?.render
+  ) {
+    return false;
+  }
+
+  return true;
+}
+/* eslint-enable */
