@@ -1,3 +1,5 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
 /// <reference lib="dom" />
 let cached: number;
 

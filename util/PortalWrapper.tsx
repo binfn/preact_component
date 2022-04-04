@@ -1,6 +1,9 @@
 // deno-lint-ignore-file no-explicit-any ban-types
 /* eslint-disable no-underscore-dangle,react/require-default-props */
 
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 import * as React  from '../deps.ts';
 import raf from './raf.ts';
 import Portal, { PortalRef } from './Portal.tsx';

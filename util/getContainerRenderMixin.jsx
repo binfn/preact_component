@@ -1,3 +1,5 @@
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
 import {Compat as ReactDOM } from '../deps.ts';
 
 function defaultGetContainer() {

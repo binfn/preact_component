@@ -1,4 +1,7 @@
 // deno-lint-ignore-file ban-types
+/** @jsx  React.h */
+/** @jsxFrag  React.Fragment */
+
 /// <reference lib="dom" />
 import * as React  from '../deps.ts';
 import {Compat,Compat as ReactDOM}  from '../deps.ts';

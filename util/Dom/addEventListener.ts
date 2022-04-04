@@ -1,7 +1,7 @@
 /// <reference lib="dom" />
 // deno-lint-ignore-file no-explicit-any
 import {Compat as ReactDOM}  from '../../deps.ts';
-export default function addEventListenerWrap(target: EventTarget, eventType: string, cb: any, option: any) {
+export default function addEventListenerWrap(target: EventTarget, eventType: string, cb: any, option?: any) {
   /* eslint camelcase: 2 */
   const callback = ReactDOM.unstable_batchedUpdates
     ? function run(e: any) {

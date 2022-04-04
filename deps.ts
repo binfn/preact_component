@@ -13,6 +13,10 @@ export { isFragment,isMemo } from "https://esm.sh/react-is";
 import ResizeObserver from "./resize-observer-polyfill/index.js";
 
 export {ResizeObserver}
+//import {ReactInstance} from "https://esm.sh/react";
+
+//import {Component} from "https://esm.sh/preact@10.x.x";
+//type ReactInstance = Component<any> | Element;
 
 export {
   useCallback,
